@@ -6,3 +6,4 @@ This docker image builds upon the Ubuntu JDK 1.8.0_144 Docker image and adds Sca
 
 2017-05-11: Updated to Scala 2.12.2, JDK 1.8.0_131, and sbt 0.13.15
 2017-08-03: Updated to Scala 2.12.3, JDK 1.8.0_144, and sbt 0.13.16
+2017-10-13: Update versioning
