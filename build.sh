@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-VERSION=2018-03
+if [[ -z $IMAGE_VERSION ]]; then
+  echo "Specify IMAGE_VERSION to give a version number for the docker image"
+  exit 1
+fi
 
-docker build -t birchwoodlangham/ubuntu-scala:$VERSION .
-docker tag birchwoodlangham/ubuntu-scala:$VERSION birchwoodlangham/ubuntu-scala:latest
+docker rmi birchwoodlangham/ubuntu-scala:latest
+docker build -t birchwoodlangham/ubuntu-scala:latest .
+docker tag birchwoodlangham/ubuntu-scala:latest birchwoodlangham/ubuntu-scala:$IMAGE_VERSION
